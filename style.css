@@ -7,10 +7,10 @@ header .logo{width:120px;}
 header nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;}
 
 /* SLIDER */
-.slider{position:relative;max-width:1000px;margin:20px auto;overflow:hidden;border-radius:15px;}
+.slider{position:relative;max-width:800px;margin:20px auto;overflow:hidden;border-radius:15px;}
 .slides{display:flex;transition: transform 0.5s ease-in-out;}
 .slide{min-width:100%;position:relative;}
-.slide img{width:100%;display:block;}
+.slide img{width:100%;max-height:300px;object-fit:cover;}
 .info-slide{position:absolute;bottom:15px;left:20px;color:white;background:rgba(0,0,0,0.5);padding:10px;border-radius:5px;}
 .info-slide .promo{background:#ff4141;color:white;padding:3px 6px;font-size:12px;border-radius:3px;margin-left:5px;}
 .prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:white;border:none;font-size:30px;padding:5px 10px;cursor:pointer;border-radius:5px;}
@@ -39,7 +39,10 @@ header nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;
 
 /* REDES */
 .redes a{margin-right:10px;text-decoration:none;color:#7b1194;font-weight:bold;}
-iframe{margin-top:10px;border-radius:10px;}
 
 /* RESPONSIVO */
-@media(max-width:768px){.cards{flex-direction:column;align-items:center;}.logo-carrinho{flex-direction:column;gap:10px;}}
+@media(max-width:768px){
+  .cards{flex-wrap:wrap;justify-content:center;}
+  .card{width:45%;} /* 2 produtos lado a lado no celular */
+  .logo-carrinho{flex-direction:column;gap:10px;}
+}
