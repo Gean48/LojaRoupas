@@ -19,7 +19,7 @@ function atualizarCarrinho(){
 document.getElementById('enviarWhatsapp').addEventListener('click',()=>{
   if(carrinho.length===0){alert("Seu carrinho está vazio!");return;}
   let mensagem=carrinho.map(p=>`${p.qtd}x ${p.nome} - R$ ${(p.preco*p.qtd).toFixed(2)}`).join('%0A');
-  let whatsappLink=`https://wa.me/559999999999?text=${mensagem}`;
+  let whatsappLink=`https://wa.me/5533999140951?text=${mensagem}`;
   window.open(whatsappLink,"_blank");
 });
 
