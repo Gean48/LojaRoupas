@@ -1,161 +1,45 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-header {
-  background-color: #7b1194;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .logo {
-  width: 120px;
-}
-
-header nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-h2 {
-  text-align: center;
-  margin: 20px 0;
-  color: #7b1194;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:#f4f4f4;color:#333;}
+header{background:#7b1194;color:white;padding:20px;display:flex;justify-content:space-between;align-items:center;}
+.logo-carrinho{display:flex;align-items:center;gap:20px;}
+header .logo{width:120px;}
+#contadorCarrinho{font-size:18px;font-weight:bold;}
+header nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;}
 
 /* SLIDER */
-.slider {
-  position: relative;
-  max-width: 1000px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 15px;
-}
+.slider{position:relative;max-width:1000px;margin:20px auto;overflow:hidden;border-radius:15px;}
+.slides{display:flex;transition: transform 0.5s ease-in-out;}
+.slide{min-width:100%;position:relative;}
+.slide img{width:100%;display:block;}
+.info-slide{position:absolute;bottom:15px;left:20px;color:white;background:rgba(0,0,0,0.5);padding:10px;border-radius:5px;}
+.info-slide .promo{background:#ff4141;color:white;padding:3px 6px;font-size:12px;border-radius:3px;margin-left:5px;}
+.prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:white;border:none;font-size:30px;padding:5px 10px;cursor:pointer;border-radius:5px;}
+.prev{left:10px;}.next{right:10px;}
 
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
+/* FILTROS */
+.filtros{text-align:center;margin-bottom:15px;}
+.filtros button{background:#7b1194;color:white;border:none;padding:8px 15px;margin:0 5px;border-radius:5px;cursor:pointer;font-weight:bold;}
+.filtros button:hover{background:#5a0e75;}
 
-.slide {
-  min-width: 100%;
-  position: relative;
-}
+/* CARDS */
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:10px;}
+.card{background:white;padding:15px;width:220px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-align:center;position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;}
+.card:hover{transform:translateY(-5px);box-shadow:0 8px 15px rgba(0,0,0,0.3);}
+.card img{width:100%;border-radius:10px;transition: transform 0.3s;}
+.card:hover img{transform:scale(1.05);}
+.card .promo{position:absolute;top:10px;left:10px;background:#ff4141;color:white;padding:3px 6px;font-size:12px;border-radius:3px;}
+.card button{background:#7b1194;color:white;border:none;padding:10px;margin-top:10px;border-radius:5px;cursor:pointer;}
+.card button:hover{background:#5a0e75;}
 
-.slide img {
-  width: 100%;
-  display: block;
-}
+/* CARRINHO */
+#carrinho{background:white;padding:20px;margin:20px;border-radius:10px;}
+#itensCarrinho p{margin:5px 0;}
+#enviarWhatsapp{background:#25D366;color:white;border:none;padding:10px;border-radius:5px;cursor:pointer;}
+#enviarWhatsapp:hover{background:#1ebe5d;}
 
-.info-slide {
-  position: absolute;
-  bottom: 15px;
-  left: 20px;
-  color: white;
-  background-color: rgba(0,0,0,0.4);
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  font-size: 30px;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
-}
-
-.card {
-  background-color: white;
-  padding: 15px;
-  width: 220px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.card button {
-  background-color: #7b1194;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.card button:hover { background-color: #5a0e75; }
-
-#carrinho {
-  background-color: #fff;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-}
-
-#itensCarrinho p {
-  margin: 5px 0;
-}
-
-#enviarWhatsapp {
-  background-color: #25D366;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#enviarWhatsapp:hover { background-color: #1ebe5d; }
-
-.redes a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: #7b1194;
-  font-weight: bold;
-}
-
-iframe {
-  margin-top: 10px;
-  border-radius: 10px;
-}
+/* REDES */
+.redes a{margin-right:10px;text-decoration:none;color:#7b1194;font-weight:bold;}
+iframe{margin-top:10px;border-radius:10px;}
 
 /* RESPONSIVO */
-@media(max-width:768px){
-  .cards { flex-direction: column; align-items: center; }
-    }
-  
+@media(max-width:768px){.cards{flex-direction:column;align-items:center;}.logo-carrinho{flex-direction:column;gap:10px;}}
