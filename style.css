@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #f5f5f5;
+  background: #f4f4f4;
 }
 
 /* TOPO */
@@ -14,16 +14,16 @@ body {
   background: #7b1194;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
 }
 
 .logo {
-  max-width: 120px;
+  max-width: 100px;
   margin-bottom: 10px;
 }
 
-.info-loja a {
-  color: #fff;
+.redes a {
+  color: white;
   text-decoration: none;
 }
 
@@ -32,7 +32,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  margin: 25px;
+  margin: 20px;
 }
 
 .categorias button {
@@ -62,7 +62,7 @@ body {
 
 .produto img {
   width: 100%;
-  max-height: 180px;
+  height: 150px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -76,7 +76,21 @@ body {
   background: #7b1194;
   color: white;
   font-weight: bold;
-  cursor: pointer;
+}
+
+/* FINALIZAR */
+.finalizar {
+  text-align: center;
+  margin: 20px;
+}
+
+.finalizar button {
+  padding: 15px 25px;
+  background: #25d366;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 /* FOOTER */
@@ -85,15 +99,12 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
-  margin-top: 30px;
 }
 
 /* CELULAR */
 @media (max-width: 768px) {
-
   .categorias {
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
   }
 
   .produtos {
@@ -101,6 +112,6 @@ footer {
   }
 
   .produto img {
-    max-height: 140px;
+    height: 120px;
   }
 }
