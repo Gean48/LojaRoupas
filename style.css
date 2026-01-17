@@ -7,7 +7,7 @@ header .logo{width:120px;}
 header nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;}
 
 /* SLIDER */
-.slider{position:relative;max-width:400px;margin:20px auto;overflow:hidden;border-radius:15px;} /* metade do tamanho */
+.slider{position:relative;max-width:100px;margin:20px auto;overflow:hidden;border-radius:15px;} /* metade do tamanho */
 .slides{display:flex;transition: transform 0.5s ease-in-out;}
 .slide{min-width:100%;position:relative;}
 .slide img{width:100%;max-height:150px;object-fit:cover;} /* metade da altura */
