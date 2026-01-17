@@ -7,13 +7,13 @@ header .logo{width:120px;}
 header nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;}
 
 /* SLIDER */
-.slider{position:relative;max-width:800px;margin:20px auto;overflow:hidden;border-radius:15px;}
+.slider{position:relative;max-width:400px;margin:20px auto;overflow:hidden;border-radius:15px;} /* metade do tamanho */
 .slides{display:flex;transition: transform 0.5s ease-in-out;}
 .slide{min-width:100%;position:relative;}
-.slide img{width:100%;max-height:300px;object-fit:cover;}
-.info-slide{position:absolute;bottom:15px;left:20px;color:white;background:rgba(0,0,0,0.5);padding:10px;border-radius:5px;}
-.info-slide .promo{background:#ff4141;color:white;padding:3px 6px;font-size:12px;border-radius:3px;margin-left:5px;}
-.prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:white;border:none;font-size:30px;padding:5px 10px;cursor:pointer;border-radius:5px;}
+.slide img{width:100%;max-height:150px;object-fit:cover;} /* metade da altura */
+.info-slide{position:absolute;bottom:10px;left:10px;color:white;background:rgba(0,0,0,0.5);padding:5px;border-radius:5px;font-size:14px;}
+.info-slide .promo{background:#ff4141;color:white;padding:2px 5px;font-size:10px;border-radius:3px;margin-left:5px;}
+.prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:white;border:none;font-size:24px;padding:5px 10px;cursor:pointer;border-radius:5px;}
 .prev{left:10px;}.next{right:10px;}
 
 /* FILTROS */
@@ -43,6 +43,6 @@ header nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;
 /* RESPONSIVO */
 @media(max-width:768px){
   .cards{flex-wrap:wrap;justify-content:center;}
-  .card{width:45%;} /* 2 produtos lado a lado no celular */
+  .card{width:48%;} /* 2 produtos lado a lado no celular */
   .logo-carrinho{flex-direction:column;gap:10px;}
 }
