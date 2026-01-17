@@ -1,142 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <title>Minha Loja de Roupas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Loja Premium</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="logo-carrinho">
-    <img src="imagens/logo.png" alt="Logo da Loja" class="logo">
-    <div id="contadorCarrinho">🛒 0</div>
+<header class="topo">
+  <img src="imagens/logo.png" class="logo" alt="Logo da Loja">
+  <h1>Minha Loja</h1>
+
+  <div class="info-loja">
+    <p>📍 Ataléia - MG</p>
+    <p>
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a>
+    </p>
   </div>
-  <nav>
-    <a href="#destaques">Destaques</a>
-    <a href="#produtos">Produtos</a>
-    <a href="#contato">Contato</a>
-  </nav>
 </header>
 
-<!-- SLIDER DE DESTAQUES -->
-<section id="destaques">
-  <div class="slider">
-    <div class="slides">
-      <div class="slide">
-        <img src="imagens/produto1.jpg" alt="Camisa Azul">
-        <div class="info-slide">
-          <h3>Camisa Azul</h3>
-          <p>Camisa masculina de algodão</p>
-          <span class="promo">Novo!</span>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="imagens/produto2.jpg" alt="Calça Jeans">
-        <div class="info-slide">
-          <h3>Calça Jeans</h3>
-          <p>Calça feminina jeans</p>
-          <span class="promo">Promoção!</span>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="imagens/produto3.jpg" alt="Boné Preto">
-        <div class="info-slide">
-          <h3>Boné Preto</h3>
-          <p>Boné unissex ajustável</p>
-        </div>
-      </div>
-    </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-  </div>
+<!-- CATEGORIAS -->
+<section class="categorias">
+  <button onclick="filtrarCategoria('todos')">Todos</button>
+  <button onclick="filtrarCategoria('camisas')">Camisas</button>
+  <button onclick="filtrarCategoria('calcas')">Calças</button>
+  <button onclick="filtrarCategoria('bone')">Bonés</button>
+  <button onclick="filtrarCategoria('cuecas')">Cuecas</button>
+  <button onclick="filtrarCategoria('blusas')">Blusas</button>
+  <button onclick="filtrarCategoria('acessorios')">Acessórios</button>
 </section>
 
-<!-- PRODUTOS COM FILTRO -->
-<section id="produtos">
-  <div class="filtros">
-    <button onclick="filtrar('todos')">Todos</button>
-    <button onclick="filtrar('camisas')">Camisas</button>
-    <button onclick="filtrar('calcas')">Calças</button>
-    <button onclick="filtrar('bones')">Bonés</button>
-    <button onclick="filtrar('cuecas')">Cuecas</button>
-    <button onclick="filtrar('blusas')">Blusas</button>
-    <button onclick="filtrar('acessorios')">Acessórios</button>
-  </div>
-  <div class="cards" id="cardsProdutos">
-    <div class="card" data-categoria="camisas">
-      <img src="imagens/produto1.jpg" alt="Camisa Azul">
-      <h3>Camisa Azul</h3>
-      <p>Camisa masculina de algodão</p>
-      <p class="preco">R$ 79,90</p>
-      <span class="promo">Novo!</span>
-      <button onclick="adicionarCarrinho('Camisa Azul',79.90)">Adicionar ao Carrinho</button>
-    </div>
+<!-- PRODUTOS -->
+<section class="produtos" id="listaProdutos">
 
-    <div class="card" data-categoria="calcas">
-      <img src="imagens/produto2.jpg" alt="Calça Jeans">
-      <h3>Calça Jeans</h3>
-      <p>Calça feminina jeans</p>
-      <p class="preco">R$ 129,90</p>
-      <span class="promo">Promoção!</span>
-      <button onclick="adicionarCarrinho('Calça Jeans',129.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="card" data-categoria="bones">
-      <img src="imagens/produto3.jpg" alt="Boné Preto">
-      <h3>Boné Preto</h3>
-      <p>Boné unissex ajustável</p>
-      <p class="preco">R$ 49,90</p>
-      <button onclick="adicionarCarrinho('Boné Preto',49.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <!-- Exemplo de novos produtos -->
-    <div class="card" data-categoria="cuecas">
-      <img src="imagens/produto4.jpg" alt="Cueca Masculina">
-      <h3>Cueca Masculina</h3>
-      <p>Cueca confortável, algodão</p>
-      <p class="preco">R$ 29,90</p>
-      <button onclick="adicionarCarrinho('Cueca Masculina',29.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="card" data-categoria="blusas">
-      <img src="imagens/produto5.jpg" alt="Blusa Feminina">
-      <h3>Blusa Feminina</h3>
-      <p>Blusa confortável e estilosa</p>
-      <p class="preco">R$ 59,90</p>
-      <button onclick="adicionarCarrinho('Blusa Feminina',59.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="card" data-categoria="acessorios">
-      <img src="imagens/produto6.jpg" alt="Acessório">
-      <h3>Acessório</h3>
-      <p>Acessório moderno para o dia a dia</p>
-      <p class="preco">R$ 19,90</p>
-      <button onclick="adicionarCarrinho('Acessório',19.90)">Adicionar ao Carrinho</button>
-    </div>
-  </div>
-</section>
-
-<!-- CARRINHO -->
-<section id="carrinho">
-  <h2>Seu Carrinho</h2>
-  <div id="itensCarrinho"></div>
-  <button id="enviarWhatsapp">Enviar Pedido via WhatsApp</button>
-</section>
-
-<!-- CONTATO -->
-<section id="contato">
-  <h2>Contato & Localização</h2>
-  <div class="redes">
-    <a href="https://instagram.com/seuloja" target="_blank">Instagram</a>
-    <a href="https://facebook.com/seuloja" target="_blank">Facebook</a>
-    <a href="https://tiktok.com/@seuloja" target="_blank">TikTok</a>
+  <div class="produto camisas">
+    <img src="imagens/camisa1.jpg">
+    <h3>Camisa Básica</h3>
+    <p>R$ 59,90</p>
+    <button onclick="adicionarCarrinho('Camisa Básica - R$59,90')">
+      Adicionar
+    </button>
   </div>
 
-  <p>Localização:</p>
-  <p id="enderecoMostrado" style="font-weight:bold;">Ataléia - MG</p>
+  <div class="produto calcas">
+    <img src="imagens/calca1.jpg">
+    <h3>Calça Jeans</h3>
+    <p>R$ 129,90</p>
+    <button onclick="adicionarCarrinho('Calça Jeans - R$129,90')">
+      Adicionar
+    </button>
+  </div>
+
+  <div class="produto bone">
+    <img src="imagens/bone1.jpg">
+    <h3>Boné Estiloso</h3>
+    <p>R$ 49,90</p>
+    <button onclick="adicionarCarrinho('Boné Estiloso - R$49,90')">
+      Adicionar
+    </button>
+  </div>
+
+  <div class="produto cuecas">
+    <img src="imagens/cueca1.jpg">
+    <h3>Cueca Confort</h3>
+    <p>R$ 29,90</p>
+    <button onclick="adicionarCarrinho('Cueca Confort - R$29,90')">
+      Adicionar
+    </button>
+  </div>
+
+  <div class="produto blusas">
+    <img src="imagens/blusa1.jpg">
+    <h3>Blusa Moletom</h3>
+    <p>R$ 99,90</p>
+    <button onclick="adicionarCarrinho('Blusa Moletom - R$99,90')">
+      Adicionar
+    </button>
+  </div>
+
+  <div class="produto acessorios">
+    <img src="imagens/acessorio1.jpg">
+    <h3>Relógio</h3>
+    <p>R$ 149,90</p>
+    <button onclick="adicionarCarrinho('Relógio - R$149,90')">
+      Adicionar
+    </button>
+  </div>
+
 </section>
+
+<footer>
+  <p>© 2026 - Minha Loja | Ataléia - MG</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
