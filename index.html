@@ -61,6 +61,9 @@
     <button onclick="filtrar('camisas')">Camisas</button>
     <button onclick="filtrar('calcas')">Calças</button>
     <button onclick="filtrar('bones')">Bonés</button>
+    <button onclick="filtrar('cuecas')">Cuecas</button>
+    <button onclick="filtrar('blusas')">Blusas</button>
+    <button onclick="filtrar('acessorios')">Acessórios</button>
   </div>
   <div class="cards" id="cardsProdutos">
     <div class="card" data-categoria="camisas">
@@ -88,6 +91,31 @@
       <p class="preco">R$ 49,90</p>
       <button onclick="adicionarCarrinho('Boné Preto',49.90)">Adicionar ao Carrinho</button>
     </div>
+
+    <!-- Exemplo de novos produtos -->
+    <div class="card" data-categoria="cuecas">
+      <img src="imagens/produto4.jpg" alt="Cueca Masculina">
+      <h3>Cueca Masculina</h3>
+      <p>Cueca confortável, algodão</p>
+      <p class="preco">R$ 29,90</p>
+      <button onclick="adicionarCarrinho('Cueca Masculina',29.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="card" data-categoria="blusas">
+      <img src="imagens/produto5.jpg" alt="Blusa Feminina">
+      <h3>Blusa Feminina</h3>
+      <p>Blusa confortável e estilosa</p>
+      <p class="preco">R$ 59,90</p>
+      <button onclick="adicionarCarrinho('Blusa Feminina',59.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="card" data-categoria="acessorios">
+      <img src="imagens/produto6.jpg" alt="Acessório">
+      <h3>Acessório</h3>
+      <p>Acessório moderno para o dia a dia</p>
+      <p class="preco">R$ 19,90</p>
+      <button onclick="adicionarCarrinho('Acessório',19.90)">Adicionar ao Carrinho</button>
+    </div>
   </div>
 </section>
 
@@ -107,11 +135,8 @@
     <a href="https://tiktok.com/@seuloja" target="_blank">TikTok</a>
   </div>
 
-  <p>Digite sua localização:</p>
-  <input type="text" id="localizacaoUsuario" placeholder="Ex: Rua ABC, 123, Cidade" style="width:100%; padding:8px; border-radius:5px; margin-bottom:10px;">
-  <button onclick="mostrarLocalizacao()" style="background:#7b1194;color:white;padding:8px 12px;border:none;border-radius:5px; cursor:pointer;">Mostrar Localização</button>
-
-  <p id="enderecoMostrado" style="margin-top:10px; font-weight:bold;"></p>
+  <p>Localização:</p>
+  <p id="enderecoMostrado" style="font-weight:bold;">Ataléia - MG</p>
 </section>
 
 <script src="script.js"></script>
