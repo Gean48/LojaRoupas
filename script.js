@@ -45,11 +45,3 @@ function filtrar(categoria){
   });
 }
 filtrar('todos');
-
-// ENDEREÇO EDITÁVEL
-function mostrarLocalizacao() {
-  const input=document.getElementById('localizacaoUsuario').value;
-  const endereco=document.getElementById('enderecoMostrado');
-  if(input.trim()===''){alert("Digite algum endereço!");return;}
-  endereco.innerText=`Localização: ${input}`;
-}
