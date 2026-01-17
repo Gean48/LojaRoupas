@@ -2,22 +2,20 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Minha Loja de Roupas</title>
+  <title>Minha Loja</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="topo">
-  <img src="imagens/logo.png" class="logo" alt="Logo da Loja">
+  <img src="imagens/logo.png" class="logo" alt="Logo">
   <h1>Minha Loja</h1>
+  <p>📍 Ataléia - MG</p>
 
-  <div class="info-loja">
-    <p>📍 Ataléia - MG</p>
-    <p>
-      <a href="#">Instagram</a> |
-      <a href="#">Facebook</a>
-    </p>
+  <div class="redes">
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a>
   </div>
 </header>
 
@@ -33,63 +31,68 @@
 </section>
 
 <!-- PRODUTOS -->
-<section class="produtos" id="listaProdutos">
+<section class="produtos">
 
   <div class="produto camisas">
-    <img src="imagens/camisa1.jpg">
+    <img src="imagens/camisa1.jpg" alt="">
     <h3>Camisa Básica</h3>
     <p>R$ 59,90</p>
     <button onclick="adicionarCarrinho('Camisa Básica - R$59,90')">
-      Adicionar
+      Adicionar ao carrinho
     </button>
   </div>
 
   <div class="produto calcas">
-    <img src="imagens/calca1.jpg">
+    <img src="imagens/calca1.jpg" alt="">
     <h3>Calça Jeans</h3>
     <p>R$ 129,90</p>
     <button onclick="adicionarCarrinho('Calça Jeans - R$129,90')">
-      Adicionar
+      Adicionar ao carrinho
     </button>
   </div>
 
   <div class="produto bone">
-    <img src="imagens/bone1.jpg">
-    <h3>Boné Estiloso</h3>
+    <img src="imagens/bone1.jpg" alt="">
+    <h3>Boné</h3>
     <p>R$ 49,90</p>
-    <button onclick="adicionarCarrinho('Boné Estiloso - R$49,90')">
-      Adicionar
+    <button onclick="adicionarCarrinho('Boné - R$49,90')">
+      Adicionar ao carrinho
     </button>
   </div>
 
   <div class="produto cuecas">
-    <img src="imagens/cueca1.jpg">
-    <h3>Cueca Confort</h3>
+    <img src="imagens/cueca1.jpg" alt="">
+    <h3>Cueca</h3>
     <p>R$ 29,90</p>
-    <button onclick="adicionarCarrinho('Cueca Confort - R$29,90')">
-      Adicionar
+    <button onclick="adicionarCarrinho('Cueca - R$29,90')">
+      Adicionar ao carrinho
     </button>
   </div>
 
   <div class="produto blusas">
-    <img src="imagens/blusa1.jpg">
+    <img src="imagens/blusa1.jpg" alt="">
     <h3>Blusa Moletom</h3>
     <p>R$ 99,90</p>
     <button onclick="adicionarCarrinho('Blusa Moletom - R$99,90')">
-      Adicionar
+      Adicionar ao carrinho
     </button>
   </div>
 
   <div class="produto acessorios">
-    <img src="imagens/acessorio1.jpg">
-    <h3>Relógio</h3>
-    <p>R$ 149,90</p>
-    <button onclick="adicionarCarrinho('Relógio - R$149,90')">
-      Adicionar
+    <img src="imagens/acessorio1.jpg" alt="">
+    <h3>Acessório</h3>
+    <p>R$ 39,90</p>
+    <button onclick="adicionarCarrinho('Acessório - R$39,90')">
+      Adicionar ao carrinho
     </button>
   </div>
 
 </section>
+
+<!-- BOTÃO WHATSAPP -->
+<div class="finalizar">
+  <button onclick="enviarWhatsApp()">Finalizar pedido no WhatsApp</button>
+</div>
 
 <footer>
   <p>© 2026 - Minha Loja | Ataléia - MG</p>
