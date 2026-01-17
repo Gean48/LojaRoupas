@@ -2,29 +2,32 @@ let carrinho = [];
 
 function adicionarCarrinho(produto) {
   carrinho.push(produto);
-  alert("Produto adicionado!");
-  enviarWhatsApp();
+  alert("Produto adicionado ao carrinho!");
 }
 
 function enviarWhatsApp() {
+  if (carrinho.length === 0) {
+    alert("Seu carrinho está vazio.");
+    return;
+  }
+
   let mensagem = "Olá! Gostaria de comprar:\n\n";
   carrinho.forEach(item => {
     mensagem += "- " + item + "\n";
   });
 
   let numero = "5599999999999"; // coloque seu WhatsApp
-  let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
-  window.open(url, "_blank");
+  let link = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
+  window.open(link, "_blank");
 }
 
-function filtrarCategoria(categoria) {
-  let produtos = document.querySelectorAll(".produto");
-
-  produtos.forEach(produto => {
-    if (categoria === "todos" || produto.classList.contains(categoria)) {
-      produto.style.display = "block";
+function filtrarCategoria(cat) {
+  document.querySelectorAll(".produto").forEach(p => {
+    if (cat === "todos" || p.classList.contains(cat)) {
+      p.style.display = "flex";
+      p.style.flexDirection = "column";
     } else {
-      produto.style.display = "none";
+      p.style.display = "none";
     }
   });
 }
