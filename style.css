@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #7b1194;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 120px;
+}
+
+header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  color: #7b1194;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  max-width: 1000px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.info-slide {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0,0,0,0.4);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card button {
+  background-color: #7b1194;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover { background-color: #5a0e75; }
+
+#carrinho {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#itensCarrinho p {
+  margin: 5px 0;
+}
+
+#enviarWhatsapp {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#enviarWhatsapp:hover { background-color: #1ebe5d; }
+
+.redes a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #7b1194;
+  font-weight: bold;
+}
+
+iframe {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  .cards { flex-direction: column; align-items: center; }
+    }
+  
